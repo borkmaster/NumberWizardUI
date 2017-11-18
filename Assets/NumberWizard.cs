@@ -11,6 +11,7 @@ public class NumberWizard : MonoBehaviour {
 	int maxGuessesAllowed = 10;
 
 	public Text guessText;
+	public Text guessesLeftText;
 
 	void Start () {
 		StartGame ();
@@ -32,6 +33,7 @@ public class NumberWizard : MonoBehaviour {
 		if (maxGuessesAllowed <= 0) {
 			Application.LoadLevel("Win");
 		}
+		guessesLeftText.text = "Guesses Left: " + maxGuessesAllowed.ToString();
 	}
 
 	public void GuessHigher() {
