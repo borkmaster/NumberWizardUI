@@ -19,14 +19,14 @@ public class NumberWizard : MonoBehaviour {
 	void StartGame () {
 		max = 1000;
 		min = 1;
-		guess = 500;
+		NextGuess ();
 
 		max += 1;
 		guessText.text = "Is your number: " + guess.ToString() + "?";
 	}
 
 	void NextGuess () {
-		guess = (max + min) / 2;
+		guess = Random.Range (min, max + 1); // (max + min) / 2;
 		guessText.text = "Is your number: " + guess.ToString() + "?";
 		maxGuessesAllowed -= 1;
 		if (maxGuessesAllowed <= 0) {
