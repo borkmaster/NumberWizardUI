@@ -33,7 +33,7 @@ public class NumberWizard : MonoBehaviour {
 		if (maxGuessesAllowed <= 0) {
 			Application.LoadLevel("Win");
 		}
-		guessesLeftText.text = "Guesses Left: " + maxGuessesAllowed.ToString();
+		guessesLeftText.text = "Computer Guesses Remaining: " + maxGuessesAllowed.ToString();
 	}
 
 	public void GuessHigher() {
